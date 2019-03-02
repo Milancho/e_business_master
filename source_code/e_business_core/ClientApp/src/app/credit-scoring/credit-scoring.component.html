@@ -1,0 +1,58 @@
+<h1>Кредитно рангирање</h1>
+<br/>
+<p>Лични податоци  (50%)</p>
+<div style="height: 500px; overflow: auto;">
+  <table id="table1">
+    <thead>
+    <tr>
+      <th>Група</th>
+      <th>Образование</th>
+      <th>Возраст</th>
+      <th>Тежина</th>
+      <th>Бодови</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let personalData of personalDataList">
+    <td>{{personalData.group}}</td>
+    <td>{{personalData.education}}</td>
+    <td>{{personalData.age}}</td>
+    <td>{{personalData.weight}}</td>
+    <td>{{personalData.score}}</td>
+  </table>
+</div>
+<br />
+<p>Податоци за семејството (50%)</p>
+<div style="height: 350px; overflow: auto;">
+  <table id="table2">
+    <thead>
+    <tr>
+      <th>Група</th>
+      <th>Пол</th>
+      <th>Брачен статус</th>
+      <th>Тежина</th>
+      <th>Бодови</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let familyData of familyDataList">
+    <td>{{familyData.group}}</td>
+    <td>{{familyData.gender}}</td>
+    <td>{{familyData.maritalStatus}}</td>
+    <td>{{familyData.weight}}</td>
+    <td>{{familyData.score}}</td>
+  </table>
+</div>
+<br />
+<p>Табела за одлука</p>
+<div style="height: 400px; overflow: auto;">
+  <table id="table3">
+    <thead>
+      <tr>
+        <th>Бодови</th>
+        <th>Одлука</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let cardStatus of cardStatusList">
+      <td>{{cardStatus.score}}</td>
+      <td>{{cardStatus.decision}}</td>
+  </table>
+</div>
