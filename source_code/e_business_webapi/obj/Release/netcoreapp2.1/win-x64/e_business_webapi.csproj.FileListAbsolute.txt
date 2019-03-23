@@ -1,0 +1,17 @@
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\hostpolicy.dll
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\hostfxr.dll
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\e_business_webapi.exe
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\e_business_webapi.deps.json
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\e_business_webapi.runtimeconfig.json
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\e_business_webapi.runtimeconfig.dev.json
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\e_business_webapi.dll
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\e_business_webapi.pdb
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.csprojAssemblyReference.cache
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.csproj.CoreCompileInputs.cache
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.RazorAssemblyInfo.cache
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.RazorAssemblyInfo.cs
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.AssemblyInfoInputs.cache
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.AssemblyInfo.cs
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.RazorTargetAssemblyInfo.cache
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.dll
+D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.pdb

@@ -1,0 +1,106 @@
+<h2 class="content-block">Податочно рударење</h2>
+<div class="content-block">
+    <div class="dx-card responsive-paddings">       
+        <ul>
+            <li>
+              People
+              <ul>
+                <li>from experience, examples = Result</li>
+              </ul>
+            </li>
+            <li>
+              Traditional approach:
+              <ul>
+                <li>Data + Algorithm = Result</li>
+              </ul>
+            </li>
+            <li>Machine learning:
+              <ul>
+                <li>Data + Output > Training = Algorithm</li>
+              </ul>
+            </li>
+          </ul>
+          
+          <div style="height: 400px; overflow: auto;">
+            <table id="customers" *ngIf="customers">
+              <thead>
+                <tr>
+                  <th>Назив</th>
+                  <th>Образовани</th>
+                  <th>Пол</th>
+                  <th>Брачен статус</th>
+                  <th>Години</th>
+                  <th>Лабела</th>
+                </tr>
+              </thead>
+              <tr *ngFor="let customer of customers">
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.educationName }}</td>
+                <td>{{ customer.genderName }}</td>
+                <td>{{ customer.maritalStatusName }}</td>
+                <td>{{ customer.age }}</td>
+                <td>{{ customer.labelName }}</td>
+              </tr>
+            </table>
+          </div>
+          
+          <!-- <form>
+            <ul class="form-style-1">
+              <li>
+                <label>Клиент:</label>
+                <input type="text" name="field1" [(ngModel)]="model.name" class="field-long" />
+              </li>
+              <li>
+                <label>Образование: </label>
+                <select [(ngModel)]="model.educationId" name="field2" class="field-select">
+                  <option *ngFor="let item of educationList" value={{item.key}}>
+                    {{item.value}}
+                  </option>
+                </select>
+              </li>
+              <li>
+                <label>Пол: </label>
+                <select [(ngModel)]="model.gender" name="field3" class="field-select">
+                  <option *ngFor="let item of genderList" value={{item.key}}>
+                    {{item.value}}
+                  </option>
+                </select>
+              </li>
+              <li>
+                <label>Брачен статус: </label>
+                <select [(ngModel)]="model.maritalStatus" name="field4" class="field-select">
+                  <option *ngFor="let item of maritalStatusList" value={{item.key}}>
+                    {{item.value}}
+                  </option>
+                </select>
+              </li>
+              <li>
+                <label class="label-text">Датум на раѓање: </label>
+          
+                <select [(ngModel)]="model.day" name="field5" class="field-divided" placeholder="">
+                  <option *ngFor="let day of days" value={{day}}>
+                    {{day}}
+                  </option>
+                </select>
+                <select [(ngModel)]="model.month" name="field6" class="field-divided" placeholder="Second">
+                  <option *ngFor="let item of monthList" value={{item.key}}>
+                    {{item.value}}
+                  </option>
+                </select>
+                <select [(ngModel)]="model.year" name="field7" class="field-divided" placeholder="Third">
+                  <option *ngFor="let year of years" value={{year}}>
+                    {{year}}
+                  </option>
+                </select>
+              </li>
+              <li>
+                <input type="submit" (click)="predictionClick()" value="Prediction" />
+                <div *ngIf="isLoading;then content else other_content"></div>
+                <ng-template #content>Loading...</ng-template>
+                <ng-template #other_content>{{message}}</ng-template>
+              </li>
+            </ul>
+          </form> -->
+          
+    </div>
+</div>
