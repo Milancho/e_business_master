@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace client_app.Models
+namespace e_business_webapi.Models
 {
     public class CardStatusModel
     {

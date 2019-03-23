@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace client_app.Shared
+namespace e_business_webapi.Shared
 {
     public static class Functions
     {

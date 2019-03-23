@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.ML.Runtime.Api;
 using Newtonsoft.Json;
 
-namespace client_app.Models
+namespace e_business_webapi.Models
 {
     public class CustomerModel
     {

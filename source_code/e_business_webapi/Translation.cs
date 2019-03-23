@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace client_app
+namespace e_business_webapi
 {
     public static class Translation
     {

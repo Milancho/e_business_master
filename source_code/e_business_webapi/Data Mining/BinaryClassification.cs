@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using client_app.Models;
+using e_business_webapi.Models;
 using Microsoft.ML;
 using Microsoft.ML.Runtime.Data;
 

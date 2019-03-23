@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Schema;
-using client_app.Models;
-using client_app.Shared;
+using e_business_webapi.Models;
+using e_business_webapi.Shared;
 using e_business_master_code;
 using e_business_master_code.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace client_app.Controllers
+namespace e_business_webapi.Controllers
 {
     [Route("api/dm")]
     [ApiController]

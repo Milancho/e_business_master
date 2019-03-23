@@ -1,3 +1,7 @@
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\cs_CardStatus.txt
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\cs_LicniPodatoci.txt
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\cs_PodatociZaSemejstvo.txt
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\customer-data-2.txt
 D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\e_business_webapi.deps.json
 D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\e_business_webapi.runtimeconfig.json
 D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\e_business_webapi.runtimeconfig.dev.json
@@ -11,8 +15,3 @@ D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Debug\netcorea
 D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Debug\netcoreapp2.1\e_business_webapi.RazorTargetAssemblyInfo.cache
 D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Debug\netcoreapp2.1\e_business_webapi.dll
 D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Debug\netcoreapp2.1\e_business_webapi.pdb
-D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Debug\netcoreapp2.1\e_business_webapi.csprojAssemblyReference.cache
-D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\cs_CardStatus.txt
-D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\cs_LicniPodatoci.txt
-D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\cs_PodatociZaSemejstvo.txt
-D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Debug\netcoreapp2.1\customer-data-2.txt

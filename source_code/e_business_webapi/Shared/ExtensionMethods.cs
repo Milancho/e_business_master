@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using client_app;
-using client_app.Models;
+using e_business_webapi;
+using e_business_webapi.Models;
 
 namespace e_business_master_code.Shared
 {
