@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 export class CoreService {
   constructor() {}
 
-  public baseUrl: string = 'http://localhost:5000/';
+  // public baseUrl: string = 'http://localhost:5000/';
+  public baseUrl: string = 'http://devcorenet.com/';
+  
 
   // public get url() {
   //    return "";

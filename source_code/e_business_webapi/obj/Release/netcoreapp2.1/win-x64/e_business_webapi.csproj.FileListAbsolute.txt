@@ -15,3 +15,7 @@ D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcor
 D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.RazorTargetAssemblyInfo.cache
 D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.dll
 D:\e-Business\e_business_master\source_code\e_business_webapi\obj\Release\netcoreapp2.1\win-x64\e_business_webapi.pdb
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\cs_CardStatus.txt
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\cs_LicniPodatoci.txt
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\cs_PodatociZaSemejstvo.txt
+D:\e-Business\e_business_master\source_code\e_business_webapi\bin\Release\netcoreapp2.1\win-x64\customer-data-2.txt
