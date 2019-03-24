@@ -25,7 +25,7 @@ export class DataMiningComponent {
 
      this.myHttpClient = http;
     
-    this.customer = new Customer("", 0, "", 0, "", 0, "", 10, 12, 1986, 0, "", "");
+    this.customer = new Customer(0,"", 0, "", 0, "", 0, "", 10, 12, 1986, 0, "", "");
     this.years = new Array<number>();
 
     //days
@@ -61,6 +61,7 @@ export class DataMiningComponent {
 
 export class Customer {
   constructor(
+    public id: number,
     public name: string,
     public educationId: number,
     public educationName: string,

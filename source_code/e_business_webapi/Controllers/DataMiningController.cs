@@ -27,11 +27,13 @@ namespace e_business_webapi.Controllers
             var count = 1;
             foreach (var value in values)
             {
+                value.Id = count;
                 value.Name = "Person_" + count;
                 value.EducationName = Functions.GetEnumKeyValuePair<Education>(value.EducationId).Value.GetByKey();
                 value.GenderName = Functions.GetEnumKeyValuePair<Gender>(value.Gender).Value.GetByKey();
                 value.MaritalStatusName = Functions.GetEnumKeyValuePair<MaritalStatus>(value.MaritalStatus).Value.GetByKey();
                 value.LabelName = value.Label == "1" ? "Добар" : "Лош";
+                count += 1;
             }
 
             return values;

@@ -1,5 +1,6 @@
 <h2 class="content-block">Податочно рударење</h2>
 <div class="content-block">
+
     <div class="dx-card responsive-paddings">       
         <ul>
             <li>
@@ -21,28 +22,25 @@
             </li>
           </ul>
           
-          <div style="height: 400px; overflow: auto;">
-            <table id="customers" *ngIf="customers">
-              <thead>
-                <tr>
-                  <th>Назив</th>
-                  <th>Образовани</th>
-                  <th>Пол</th>
-                  <th>Брачен статус</th>
-                  <th>Години</th>
-                  <th>Лабела</th>
-                </tr>
-              </thead>
-              <tr *ngFor="let customer of customers">
-                <td>{{ customer.name }}</td>
-                <td>{{ customer.educationName }}</td>
-                <td>{{ customer.genderName }}</td>
-                <td>{{ customer.maritalStatusName }}</td>
-                <td>{{ customer.age }}</td>
-                <td>{{ customer.labelName }}</td>
-              </tr>
-            </table>
-          </div>
+     <dx-data-grid class="dx-card wide-card" id="gridContainer" [dataSource]="customers" [showBorders]="true"
+          [focusedRowIndex]="0" [columnAutoWidth]="true" keyExpr="id" [hoverStateEnabled]="true">
+          <dxo-paging [pageSize]="10"></dxo-paging>
+          <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+          <dxo-filter-row [visible]="true"></dxo-filter-row>
+          <dxi-column dataField="name" [width]="190" caption="Назив">
+          </dxi-column>
+          <dxi-column dataField="educationName" caption="Образовани">
+          </dxi-column>
+          <dxi-column dataField="genderName" caption="Пол" [allowSorting]="false">
+          </dxi-column>
+          <dxi-column dataField="maritalStatusName" caption="Брачен статус">
+          </dxi-column>
+          <dxi-column dataField="age" caption="Години">
+          </dxi-column>
+          <dxi-column dataField="labelName" caption="Лабела">
+          </dxi-column>
+          <dxo-export [enabled]="true" ></dxo-export>
+      </dx-data-grid>
           
           <!-- <form>
             <ul class="form-style-1">

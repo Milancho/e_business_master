@@ -9,6 +9,7 @@ namespace e_business_webapi.Models
 {
     public class CustomerModel
     {
+        public int Id;
         public string Name { get; set; }
         public int EducationId { get; set; }
         public string EducationName { get; set; }
