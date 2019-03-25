@@ -17,9 +17,7 @@ namespace e_business_webapi.Models
         public string GenderName { get; set; }
         public int MaritalStatus { get; set; }
         public string MaritalStatusName { get; set; }
-        public int Day { get; set; }
-        public int Month { get; set; }
-        public int Year { get; set; }
+        public DateTime BirthDate { get; set; }
         public int Age;
         public string Label;
         public string LabelName;

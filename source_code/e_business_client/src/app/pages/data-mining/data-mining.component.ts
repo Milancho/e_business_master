@@ -10,53 +10,40 @@ export class DataMiningComponent {
   public educationList: any[];
   public genderList: any[];
   public maritalStatusList: any[];
-  public message: string;
+  // public message: string;
   public customer: Customer;
   public customers: Customer[];
-  public days: number[] = [31];
-  public monthList: Array<KeyValuePair>;
-  public years: Array<number>;
   public myHttpClient: HttpClient;
-  public myBaseUrl: string;
   public isLoading = false;
-
-  constructor(http: HttpClient, coreService: CoreService) {
+  
+  constructor(http: HttpClient, private coreService: CoreService) {
     console.log("DM");
 
-     this.myHttpClient = http;
-    
-    this.customer = new Customer(0,"", 0, "", 0, "", 0, "", 10, 12, 1986, 0, "", "");
-    this.years = new Array<number>();
-
-    //days
-    for (var m = 0; m <= 31; m++) {
-      this.days[m] = m;
-    }
-    //months
-    this.monthList = new Array<KeyValuePair>(new KeyValuePair(1, "Јануари"), new KeyValuePair(2, "Февруари"), new KeyValuePair(3, "Март"), new KeyValuePair(4, "Април"), new KeyValuePair(5, "Мај"), new KeyValuePair(6, "Јуни"), new KeyValuePair(7, "Јули"), new KeyValuePair(8, "Август"), new KeyValuePair(9, "Септември"), new KeyValuePair(10, "Октомври"), new KeyValuePair(11, "Ноември "), new KeyValuePair(12, "Декември"));
-    //year
-    for (var y = 1960; y <= 2015; y++) {
-      this.years.push(y);
-    }
-
+    this.myHttpClient = http;    
+    this.customer = new Customer(0,"", 0, "", 0, "", 0, "", new Date(), 0, "", "", "");
     http.get<Customer[]>(coreService.baseUrl + 'api/dm').subscribe(result => {
       console.log(result);
       this.customers = result;
     }, error => console.error(error));
 
-    // http.get<any[]>(baseUrl + 'api/SampleData/GetEducations').subscribe(result => {
-    //   this.educationList = result;
-    // }, error => console.error(error));
-
-    // http.get<any[]>(baseUrl + 'api/SampleData/GetGender').subscribe(result => {
-    //   this.genderList = result;
-    // }, error => console.error(error));
-
-    // http.get<any[]>(baseUrl + 'api/SampleData/GetMaritalStatus').subscribe(result => {
-    //   this.maritalStatusList = result;
-    // }, error => console.error(error));
-
+    http.get<any>(coreService.baseUrl + 'api/enum').subscribe(result => {
+      this.educationList = result.education;
+      this.genderList = result.gender;
+      this.maritalStatusList = result.maritalStatus;            
+    }, error => console.error(error));
   }
+
+  predictionClick() {    
+    this.isLoading = true;
+    this.customer.message = "Loading...";   
+    this.myHttpClient.post<CustomerPrediction>(this.coreService.baseUrl + 'api/dm', this.customer).subscribe(result => {
+      var description = (result.isGoodClient) ? "Добар" : "Лош";
+      this.customer.message =
+        this.customer.name + " е '" + description + "' клиент !!! Моделот има точност од: " + Math.round(result.score * 100) + "%";
+      this.isLoading = false;
+    }, error => console.error(error));
+  }
+  
 }
 
 export class Customer {
@@ -69,12 +56,11 @@ export class Customer {
     public genderName: string,
     public maritalStatus: number,
     public maritalStatusName: string,
-    public day: number,
-    public month: number,
-    public year: number,
+    public birthDate: Date, 
     public аge: number,
     public label: string,
-    public labelName: string
+    public labelName: string,
+    public message: string
   ) { }
 }
 

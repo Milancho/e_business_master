@@ -20,7 +20,7 @@
     "e_business_webapi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/home",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

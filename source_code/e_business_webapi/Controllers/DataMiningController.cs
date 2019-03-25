@@ -42,10 +42,9 @@ namespace e_business_webapi.Controllers
         [HttpPost]
         public IActionResult Post(CustomerModel model)
         {
-            var birthDate = new DateTime(model.Year, model.Month, model.Day);
             var today = DateTime.Today;
-            var age = today.Year - birthDate.Year;
-            if (birthDate > today.AddYears(-age)) age--;
+            var age = today.Year - model.BirthDate.Year;
+            if (model.BirthDate > today.AddYears(-age)) age--;
 
             var customerDataMiningModel = new CustomerDataMiningModel()
             {

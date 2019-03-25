@@ -1,48 +1,89 @@
 <h2 class="content-block">Податочно рударење</h2>
 <div class="content-block">
 
-    <div class="dx-card responsive-paddings">       
+  <div class="dx-card responsive-paddings">
+    <ul>
+      <li>
+        People
         <ul>
-            <li>
-              People
-              <ul>
-                <li>from experience, examples = Result</li>
-              </ul>
-            </li>
-            <li>
-              Traditional approach:
-              <ul>
-                <li>Data + Algorithm = Result</li>
-              </ul>
-            </li>
-            <li>Machine learning:
-              <ul>
-                <li>Data + Output > Training = Algorithm</li>
-              </ul>
-            </li>
-          </ul>
-          
-     <dx-data-grid class="dx-card wide-card" id="gridContainer" [dataSource]="customers" [showBorders]="true"
-          [focusedRowIndex]="0" [columnAutoWidth]="true" keyExpr="id" [hoverStateEnabled]="true">
-          <dxo-paging [pageSize]="10"></dxo-paging>
-          <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
-          <dxo-filter-row [visible]="true"></dxo-filter-row>
-          <dxi-column dataField="name" [width]="190" caption="Назив">
-          </dxi-column>
-          <dxi-column dataField="educationName" caption="Образовани">
-          </dxi-column>
-          <dxi-column dataField="genderName" caption="Пол" [allowSorting]="false">
-          </dxi-column>
-          <dxi-column dataField="maritalStatusName" caption="Брачен статус">
-          </dxi-column>
-          <dxi-column dataField="age" caption="Години">
-          </dxi-column>
-          <dxi-column dataField="labelName" caption="Лабела">
-          </dxi-column>
-          <dxo-export [enabled]="true" ></dxo-export>
-      </dx-data-grid>
-          
-          <!-- <form>
+          <li>from experience, examples = Result</li>
+        </ul>
+      </li>
+      <li>
+        Traditional approach:
+        <ul>
+          <li>Data + Algorithm = Result</li>
+        </ul>
+      </li>
+      <li>Machine learning:
+        <ul>
+          <li>Data + Output > Training = Algorithm</li>
+        </ul>
+      </li>
+    </ul>
+
+    <dx-form id="form" [colCount]="1" [formData]="customer">
+
+      <dxi-item itemType="group" [colCount]="1">
+        <dxi-item dataField="name" [label]="{text: 'Клиент'}"></dxi-item>
+      </dxi-item>
+
+      <dxi-item itemType="group" [colCount]="2">
+       
+        <dxi-item dataField="birthDate" editorType="dxDateBox" [label]="{text: 'Датум на раѓање'}"
+          [editorOptions]="{ width: '100%', displayFormat: 'yyyy/MM/dd'}">
+          <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+        </dxi-item>
+
+        <dxi-item dataField="gender" editorType="dxSelectBox" [label]="{text: 'Пол'}"
+          [editorOptions]="{items: genderList, displayExpr: 'value', valueExpr: 'key'}">
+          <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+        </dxi-item>
+
+         <dxi-item dataField="educationId" editorType="dxSelectBox" [label]="{text: 'Образование'}"
+          [editorOptions]="{items: educationList, displayExpr: 'value', valueExpr: 'key'}">
+          <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+        </dxi-item>
+        
+        <dxi-item dataField="maritalStatus" editorType="dxSelectBox" [label]="{text: 'Брачен статус'}"
+          [editorOptions]="{items: maritalStatusList, displayExpr: 'value', valueExpr: 'key'}">
+          <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+        </dxi-item> 
+
+      </dxi-item>  
+
+      <dxi-item itemType="group" [colCount]="1">
+          <dxi-item dataField="message" [editorOptions]="{ disabled: true }" [label]="{text: 'Лабела'}"></dxi-item>
+      </dxi-item>
+      
+
+    </dx-form>
+    <div align="right">    
+      <dx-button type="success" text="Процесирај" (onClick)="predictionClick()">
+      </dx-button>              
+    </div>
+
+    <dx-data-grid class="dx-card wide-card" id="gridContainer" [dataSource]="customers" [showBorders]="true"
+      [focusedRowIndex]="0" [columnAutoWidth]="true" keyExpr="id" [hoverStateEnabled]="true">
+      <dxo-paging [pageSize]="10"></dxo-paging>
+      <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+      <dxo-filter-row [visible]="true"></dxo-filter-row>
+      <dxi-column dataField="name" [width]="190" caption="Назив">
+      </dxi-column>
+      <dxi-column dataField="educationName" caption="Образовани">
+      </dxi-column>
+      <dxi-column dataField="genderName" caption="Пол" [allowSorting]="false">
+      </dxi-column>
+      <dxi-column dataField="maritalStatusName" caption="Брачен статус">
+      </dxi-column>
+      <dxi-column dataField="age" caption="Години">
+      </dxi-column>
+      <dxi-column dataField="labelName" caption="Лабела">
+      </dxi-column>
+      <dxo-export [enabled]="true"></dxo-export>
+    </dx-data-grid>
+
+    <!-- <form>
             <ul class="form-style-1">
               <li>
                 <label>Клиент:</label>
@@ -99,6 +140,6 @@
               </li>
             </ul>
           </form> -->
-          
-    </div>
+
+  </div>
 </div>
