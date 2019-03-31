@@ -5,6 +5,11 @@ export const navigation = [
     icon: 'home'
   },
   {
+    text: 'Calculator',
+    path: '/calculator',
+    icon: 'percent'
+  },
+  {
     text: 'Моделирање на банкарски процеси',
     path: '/bpm',
     icon: 'repeat'

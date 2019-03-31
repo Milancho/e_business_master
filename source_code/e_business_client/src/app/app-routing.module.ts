@@ -4,6 +4,7 @@ import { LoginFormComponent } from './shared/components';
 import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { BpmComponent } from './pages/bpm/bpm.component';
+import { CalculatorComponent } from './pages/calculator/calculator.component';
 import { DataMiningComponent } from './pages/data-mining/data-mining.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { DisplayDataComponent } from './pages/display-data/display-data.component';
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'calculator',
+    component: CalculatorComponent,
     canActivate: [ AuthGuardService ]
   },
   {
@@ -52,6 +58,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes), DxDataGridModule, DxFormModule, DxButtonModule, CommonModule],
   providers: [AuthGuardService],
   exports: [RouterModule],
-  declarations: [HomeComponent, BpmComponent, DataMiningComponent, ProfileComponent, DisplayDataComponent]
+  declarations: [HomeComponent, BpmComponent, CalculatorComponent, DataMiningComponent, ProfileComponent, DisplayDataComponent]
 })
 export class AppRoutingModule { }

@@ -15,3 +15,10 @@ export class CoreService {
   //   // return "http://192.168.1.32:8081/Core/"
   // }
 }
+
+export class KeyValuePair {
+  constructor(
+    public key: number,
+    public value: string,
+  ) { }
+}

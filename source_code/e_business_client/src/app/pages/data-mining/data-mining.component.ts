@@ -70,10 +70,3 @@ export class CustomerPrediction {
     public score: number
   ) { }
 }
-
-export class KeyValuePair {
-  constructor(
-    public key: number,
-    public value: string,
-  ) { }
-}

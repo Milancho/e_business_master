@@ -1,0 +1,110 @@
+<h2 class="content-block">Calculator</h2>
+<div class="content-block">
+  <div class="dx-card responsive-paddings">
+    <dx-form id="form" [colCount]="1" [formData]="calculator">
+
+
+      <dxi-item itemType="group" colCount="2">
+        <dxi-item itemType="tabbed" colSpan="2">
+          <dxi-tab title="Loan Payment Calculator" colCount="2">
+
+            <dxi-item itemType="group" caption="Calculation Information">
+
+              <dxi-item dataField="currency" editorType="dxSelectBox" [label]="{text: 'Currency'}"
+                [editorOptions]="{items: currencyList, displayExpr: 'value', valueExpr: 'key'}">
+                <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+              </dxi-item>
+
+              <dxi-item dataField="loanAmount" editorType="dxNumberBox" [label]="{text: 'Loan Amount'}"
+                [editorOptions]="{format: '#,##0.00'}">
+                <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+              </dxi-item>
+
+              <dxi-item dataField="interestRate" editorType="dxNumberBox" [label]="{text: 'Interest Rate'}"
+                [editorOptions]="{format: '#,##0.00'}">
+                <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+              </dxi-item>
+
+              <dxi-item dataField="months" editorType="dxNumberBox" [label]="{text: 'Months'}"
+                [editorOptions]="{format: '#,##0'}">
+                <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+              </dxi-item>
+
+              <dxi-item dataField="loanStartDate" editorType="dxDateBox" [label]="{text: 'Loan Start Date'}"
+                [editorOptions]="{ width: '100%', displayFormat: 'yyyy/MM/dd'}">
+                <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+              </dxi-item>
+
+              <dxi-item dataField="interestRateCalculation" editorType="dxSelectBox"
+                [label]="{text: 'Interest Rate Calculation'}"
+                [editorOptions]="{items: interestRateCalculationList, displayExpr: 'value', valueExpr: 'key'}">
+                <dxi-validation-rule type="required" message="Field is required"></dxi-validation-rule>
+              </dxi-item>
+
+            </dxi-item>
+
+            <dxi-item itemType="group" caption="Calculation Results">
+
+              <dxi-item dataField="monthlyPayments" editorType="dxNumberBox" [label]="{text: 'Monthly Payments'}"
+                [editorOptions]="{format: '#,##0.00'}">
+              </dxi-item>
+
+              <dxi-item dataField="loanAmount" editorType="dxNumberBox" [label]="{text: 'Loan Amount'}"
+                [editorOptions]="{format: '#,##0.00'}">
+              </dxi-item>
+
+              <dxi-item dataField="totalInterest" editorType="dxNumberBox" [label]="{text: 'Total Interest'}"
+                [editorOptions]="{format: '#,##0.00'}">
+              </dxi-item>
+
+              <dxi-item dataField="totalToBeRepaid" editorType="dxNumberBox" [label]="{text: 'Total To Be Repaid'}"
+                [editorOptions]="{format: '#,##0.00'}">
+              </dxi-item>
+
+              <dxi-item dataField="effectiveAnnualRate" editorType="dxNumberBox"
+                [label]="{text: 'Effective Annual Rate'}" [editorOptions]="{format: '#,##0.00'}">
+              </dxi-item>
+
+              <dxi-item dataField="estimatedPayoffDate" editorType="dxDateBox" [label]="{text: 'Estimated Payoff Date'}"
+                [editorOptions]="{ width: '100%', displayFormat: 'yyyy/MM/dd'}">
+              </dxi-item>
+            </dxi-item>
+  
+          </dxi-tab>
+
+          <dxi-tab title="Calculations ">
+            <dx-data-grid class="dx-card wide-card" id="gridContainer" [dataSource]="calculationList" [showBorders]="true"
+              [focusedRowIndex]="0" [columnAutoWidth]="true" keyExpr="month" [hoverStateEnabled]="true">
+              <dxo-paging [pageSize]="10"></dxo-paging>
+              <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+              <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+              <dxi-column dataField="month" [width]="90" caption="Month">
+              </dxi-column>
+              <dxi-column dataField="startingBalance" caption="Starting Balance"  format="fixedPoint" >
+              </dxi-column>
+              <dxi-column dataField="repayment" caption="Repayment" format="fixedPoint">
+              </dxi-column>
+              <dxi-column dataField="interestPaid" caption="Interest Paid" format="fixedPoint">
+              </dxi-column>
+              <dxi-column dataField="principalPaid" caption="Principal Paid" format="fixedPoint">
+              </dxi-column>
+              <dxi-column dataField="newBalance" caption="New balance" format="fixedPoint">
+              </dxi-column>
+
+              <dxo-export [enabled]="true"></dxo-export>
+
+            </dx-data-grid>
+          </dxi-tab>
+        </dxi-item>
+      </dxi-item>
+
+    </dx-form>
+    <div align="left">    
+        <dx-button type="success" text="Calculate" (onClick)="calculateClick()">
+        </dx-button>              
+      </div>
+  </div>
+</div>
+
+<!-- <pre>{{calculator | json}}</pre> -->
