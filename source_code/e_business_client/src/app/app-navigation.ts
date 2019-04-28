@@ -1,6 +1,6 @@
 export const navigation = [
   {
-    text: 'Почетна',
+    text: 'Home',
     path: '/home',
     icon: 'home'
   },
@@ -10,12 +10,12 @@ export const navigation = [
     icon: 'percent'
   },
   {
-    text: 'Моделирање на банкарски процеси',
+    text: 'BPM',
     path: '/bpm',
     icon: 'repeat'
   },
   {
-    text: 'Податочно рударење',
+    text: 'Data Mining',
     path: '/data-mining',
     icon: 'preferences'
   },

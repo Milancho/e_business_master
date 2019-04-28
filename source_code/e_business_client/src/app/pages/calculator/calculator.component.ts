@@ -12,11 +12,11 @@ export class CalculatorComponent {
   public calculator: Calculator;
   public calculationList: Calculation[];
 
-  constructor() {
+  constructor(private http: HttpClient, private coreService: CoreService) {
     var date = new Date();
-
+    
     console.log(date.getDate());
-    this.calculator = new Calculator(0, 1, 0, 0, 0, new Date(), 1);
+    this.calculator = new Calculator(0, 2, 10000, 5.5, 12, new Date(), 1);
 
     this.currencyList = [
       new KeyValuePair(1, "Dollar ($)"),
@@ -27,22 +27,18 @@ export class CalculatorComponent {
       new KeyValuePair(1, "Actual/360"),
       new KeyValuePair(2, "30/360")
     ];
-
-    this.calculationList = [
-      new Calculation(1, 30000, 532, 210, 322, 29678),
-      new Calculation(2, 29678, 532, 207.75, 324.25, 29353.75),
-      new Calculation(3, 29353.75, 532, 205.48, 326.52, 29027.23),
-      new Calculation(4, 29027.23, 532, 203.19, 328.81, 28698.42),
-      new Calculation(5, 28698.42, 532, 200.89, 331.11, 28367.31),
-    ];
   }
 
-  calculateClick() {    
+   calculateClick() {    
     console.log("calculateClick");
+    this.http.post<Calculation[]>(this.coreService.baseUrl + 'api/calculator/calculations', this.calculator).subscribe(result => {
+      console.log(result);
+      this.calculationList = result;
+    }, error => console.error(error));
    }
-   
-}
 
+}
+ 
 export class Calculator {
   constructor(
     public id: number,
@@ -52,13 +48,13 @@ export class Calculator {
     public months: number,
     public loanStartDate: Date,
     public interestRateCalculation: number,
-
   ) { }
 }
 
 export class Calculation {
   constructor(
-    public month: number,
+    public no: number,
+    public date: Date,
     public startingBalance: number,
     public repayment: number,
     public interestPaid: number,

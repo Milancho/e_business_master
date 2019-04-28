@@ -27,4 +27,35 @@ namespace e_business_master_code
         Widower = 3,
         Divorced = 4,
     }
+
+    public enum RepaymentFrequencyEnum
+    {
+        Monthly = 1,
+        BiMonthly = 2,
+        Quarterly = 3,
+        SemiYearly = 6,
+        Yearly = 12,
+        Weekly = 7,
+        BiWeekly = 14,
+        SemiMonthly = 15,
+        Daily = 44
+    }
+
+    public enum PeriodicInterestRateEnum
+    {
+        Yearly = 1,
+        Monthly = 2,
+        Daily = 3
+    }
+
+    public enum CalculationInterestRateEnum
+    {
+        MethodActualActual = 11,
+        Method30360 = 12,
+        Method30Actual = 13,
+        Method31360 = 14,
+        Method31Actual = 15,
+        MethodActual360 = 16
+    }
+
 }

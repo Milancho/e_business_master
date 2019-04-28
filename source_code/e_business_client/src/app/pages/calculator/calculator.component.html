@@ -74,12 +74,14 @@
 
           <dxi-tab title="Calculations ">
             <dx-data-grid class="dx-card wide-card" id="gridContainer" [dataSource]="calculationList" [showBorders]="true"
-              [focusedRowIndex]="0" [columnAutoWidth]="true" keyExpr="month" [hoverStateEnabled]="true">
+              [focusedRowIndex]="0" [columnAutoWidth]="true" keyExpr="no" [hoverStateEnabled]="true">
               <dxo-paging [pageSize]="10"></dxo-paging>
               <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
               <dxo-filter-row [visible]="true"></dxo-filter-row>
 
-              <dxi-column dataField="month" [width]="90" caption="Month">
+              <dxi-column dataField="no" [width]="90" caption="No.">
+              </dxi-column>
+              <dxi-column dataField="date" caption="Date" dataType="date" format="yyyy/MM/dd">
               </dxi-column>
               <dxi-column dataField="startingBalance" caption="Starting Balance"  format="fixedPoint" >
               </dxi-column>
