@@ -15,7 +15,7 @@ export const navigation = [
     icon: 'repeat'
   },
   {
-    text: 'Data Mining',
+    text: 'Machine Learning',
     path: '/data-mining',
     icon: 'preferences'
   },

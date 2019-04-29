@@ -37,13 +37,12 @@ export class DataMiningComponent {
     this.isLoading = true;
     this.customer.message = "Loading...";   
     this.myHttpClient.post<CustomerPrediction>(this.coreService.baseUrl + 'api/dm', this.customer).subscribe(result => {
-      var description = (result.isGoodClient) ? "Добар" : "Лош";
-      this.customer.message =
-        this.customer.name + " е '" + description + "' клиент !!! Моделот има точност од: " + Math.round(result.score * 100) + "%";
+      console.log(result)
+      var description = (result.isGoodClient) ? "Good" : "Bad";
+      this.customer.message = "Client: " + this.customer.name + " predicted as: " + description + " with accuracy: " + Math.round(result.score * 100) + "%";
       this.isLoading = false;
     }, error => console.error(error));
   }
-  
 }
 
 export class Customer {
